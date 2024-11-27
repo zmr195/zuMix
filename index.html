@@ -2,45 +2,56 @@
 <html lang="en">
 
 <head>
-    <link rel="icon" href="logo.png.jpg"/>
     <meta charset="UTF-8">
-    <title>Language Translator</title>
-    <link rel="stylesheet" href="./style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Language Translator">
+    <title>Language Translator</title>
 
-    <!--Font Awesome CDN link For icons-->
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <!-- Link for favicon -->
+    <link rel="icon" href="logo.png.jpg" />
 
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- Font Awesome CDN link for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 </head>
 
 <body>
     <div class="container">
         <div class="wrapper">
+            <!-- Text input areas -->
             <div class="text-input">
-                <textarea class="from-text" placeholder="Enter text" id="001"></textarea>
-                <textarea class="to-text" placeholder="Translation" readonly displayed id="002"></textarea>
+                <textarea class="from-text" placeholder="Enter text" id="from-text"></textarea>
+                <textarea class="to-text" placeholder="Translation" readonly id="to-text"></textarea>
             </div>
+
+            <!-- Language controls -->
             <ul class="controls">
                 <li class="row from">
                     <div class="icons">
-                        <i id="from" class="fas fa-volume-up"></i>
-                        <i id="from" class="fas fa-copy"></i>
+                        <i class="fas fa-volume-up" id="from-speak"></i>
+                        <i class="fas fa-copy" id="from-copy"></i>
                     </div>
-                    <select></select>
+                    <select id="from-language"></select>
                 </li>
-                <li class="exchange"><i class="fas fa-exchange-alt"></i></li>
+                <li class="exchange">
+                    <i class="fas fa-exchange-alt" id="exchange"></i>
+                </li>
                 <li class="row to">
-                    <select></select>
+                    <select id="to-language"></select>
                     <div class="icons">
-                        <i id="to" class="fas fa-volume-up"></i>
-                        <i id="to" class="fas fa-copy"></i>
+                        <i class="fas fa-volume-up" id="to-speak"></i>
+                        <i class="fas fa-copy" id="to-copy"></i>
                     </div>
                 </li>
             </ul>
         </div>
-        <button>Translate Text</button>
+        <!-- Translate button -->
+        <button id="translate-btn">Translate Text</button>
     </div>
 
+    <!-- JS Files -->
     <script src="./countries.js"></script>
     <script src="./script.js"></script>
 </body>

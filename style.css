@@ -1,110 +1,144 @@
-/*Import Google Font - popins*/
-@import url('https://fonts.googleapis.com/css2?family=poppins:wght@400;500;600;700&display=swap');
-*{
+/* Import Google Font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
-
+    font-family: 'Poppins', sans-serif; /* Using imported font */
 }
-body{
+
+body {
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-image: url("trans.jpg");
+    background-image: url("trans.jpg"); /* Ensure this image path is correct */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-.container{
-    width: 690px;
-    background: #fff;
-    border-radius: 7px;
+.container {
+    width: 700px;
+    background: #ffffff;
+    border-radius: 10px;
     padding: 30px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.wrapper{
+.wrapper {
     border-radius: 5px;
     border: 1px solid #080808;
+    overflow: hidden; /* Prevent border overflow issues */
 }
-.wrapper .text-input{
+
+.wrapper .text-input {
     display: flex;
     border-bottom: 1px solid #080808;
 }
 
-.text-input .to-text{
-    border-radius: 0px;
+.text-input .to-text {
+    border-radius: 0;
     border-left: 1px solid #080808;
 }
 
-.text-input textarea{
+.text-input textarea {
     height: 250px;
     width: 100%;
     border: none;
     outline: none;
     resize: none;
     font-size: 18px;
-    border-radius: 5px;
     background: none;
-    padding: 10px 15px;
-
+    padding: 15px;
+    color: #333; /* Add default text color */
+    font-family: 'Poppins', sans-serif;
 }
 
-.controls ,li .icons .icons i{
+.controls, .controls .icons {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.controls{
+.controls {
     list-style: none;
     padding: 12px 15px;
-
+    gap: 15px;
 }
 
-.controls .row.from .icons{
+.controls .row.from .icons {
     padding-right: 15px;
     border-right: 1px solid #080808;
 }
 
-.controls .row.to .icons{
+.controls .row.to .icons {
     padding-left: 15px;
     border-left: 1px solid #080808;
 }
 
-.controls .icons{
-    width: 38%;
-
+.controls .icons {
+    display: flex;
+    gap: 10px; /* Add spacing between icons */
 }
-.controls .icons i{
-    width: 50px;
-    color: #5a5a5a;
-    font-size: 14px;
-    cursor: pointer;
+
+.controls .icons i {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
     justify-content: center;
+    color: #5a5a5a;
+    font-size: 18px;
+    cursor: pointer;
+    transition: color 0.2s, transform 0.2s;
 }
 
-.controls .row select{
+.controls .icons i:hover {
+    color: #1cddeb;
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+.controls .row select {
     border: none;
     outline: none;
     font-size: 18px;
     background: none;
-}
-
-.controls .exchange{
-    color: #5a5a5a;
-    font-size: 16px;
+    padding: 5px;
+    font-family: 'Poppins', sans-serif;
     cursor: pointer;
 }
 
-.container button{
+.controls .exchange {
+    color: #5a5a5a;
+    font-size: 18px;
+    cursor: pointer;
+    transition: color 0.2s, transform 0.2s;
+}
+
+.controls .exchange:hover {
+    color: #1cddeb;
+    transform: rotate(180deg); /* Add a rotation effect */
+}
+
+.container button {
     width: 100%;
-    padding: 14px;
+    padding: 15px;
     margin-top: 20px;
     border: none;
     outline: none;
     cursor: pointer;
     font-size: 17px;
+    font-weight: 600;
     border-radius: 5px;
-    background-color: rgba(0, 5, 10, 0.959);
-    color: rgb(28, 221, 235);
+    background-color: #000a0f;
+    color: #1cddeb;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.container button:hover {
+    background-color: #1cddeb;
+    color: #000a0f;
+    transform: scale(1.05); /* Slight button enlargement */
 }
