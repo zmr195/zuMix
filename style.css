@@ -122,6 +122,7 @@ body {
     transform: rotate(180deg); /* Add a rotation effect */
 }
 
+/* Updated Styling for the Translate Button with Animation */
 .container button {
     width: 100%;
     padding: 15px;
@@ -134,11 +135,29 @@ body {
     border-radius: 5px;
     background-color: #000a0f;
     color: #1cddeb;
+    position: relative;
     transition: background-color 0.3s, transform 0.2s;
 }
 
+/* Hover effect for the button */
 .container button:hover {
     background-color: #1cddeb;
     color: #000a0f;
     transform: scale(1.05); /* Slight button enlargement */
+}
+
+/* Arrow rotation and hover effect for the button */
+.container button .arrow {
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+
+/* Add rotation effect on hover */
+.container button:hover .arrow {
+    transform: rotate(180deg); /* Rotating the arrow */
+}
+
+/* Slightly increase the scale of the button on hover */
+.container button:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
 }
